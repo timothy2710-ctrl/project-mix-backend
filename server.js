@@ -52,6 +52,7 @@ app.get('/fortnite/api/game/v2/enabled_features', (req, res) => {
     res.json([]);
 });
 
-app.listen(PORT, () => {
+// UPDATE: Explizit auf '0.0.0.0' lauschen, damit Render den Server erreicht
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`[Project Mix] Server gestartet auf Port ${PORT}`);
 });
